@@ -1,0 +1,19 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Material Theme Ocean",
+  "editor.renderWhitespace": "all",
+  "files.eol": "\n",
+  "prettier.trailingComma": "all",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.trace.server": "verbose",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "materialTheme.fixIconsRunning": false,
+  "window.zoomLevel": 1,
+  // Set the default
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true
+}

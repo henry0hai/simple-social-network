@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "d364b27c-5adb-4f4b-a5a9-35c2f5367752",
+		"name": "simple-social-network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "makeFriend (user story 1)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"friends\":\n    [\n      \"user1@test.ok\",\n      \"user3@test.ok\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://206.189.34.9/api/make-friend",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"34",
+						"9"
+					],
+					"path": [
+						"api",
+						"make-friend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFriends (user story 2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d5018624-1784-4f04-b9b6-8615805a13cb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user1@test.ok\"\n}"
+				},
+				"url": {
+					"raw": "http://206.189.34.9/api/friends",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"34",
+						"9"
+					],
+					"path": [
+						"api",
+						"friends"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCommondFriends (user story 3)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"friends\":\n    [\n      \"user1@test.ok\",\n      \"user2@test.ok\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://206.189.34.9/api/get-common-friends",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"34",
+						"9"
+					],
+					"path": [
+						"api",
+						"get-common-friends"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscribe (user story 4)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"requestor\": \"user4@test.ok\",\n  \"target\": \"user5@test.ok\"\n}"
+				},
+				"url": {
+					"raw": "http://206.189.34.9/api/subscribe",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"34",
+						"9"
+					],
+					"path": [
+						"api",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block (user story 5)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"requestor\": \"user3@test.ok\",\n  \"target\": \"user1@test.ok\"\n}"
+				},
+				"url": {
+					"raw": "http://206.189.34.9/api/block",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"34",
+						"9"
+					],
+					"path": [
+						"api",
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "composeMessage (user story 6)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sender\":  \"hai@ltv.vn\",\n  \"text\": \"Hello World! user1@test.ok and user2@test.ok with other user abc@abc.com\"\n}"
+				},
+				"url": {
+					"raw": "http://206.189.34.9/api/compose-message",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"34",
+						"9"
+					],
+					"path": [
+						"api",
+						"compose-message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
