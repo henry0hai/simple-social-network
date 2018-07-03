@@ -36,9 +36,10 @@ module.exports = {
         email: { type: 'email' },
         password: { type: 'string', min: 1 }
       },
-      handler(ctx) {
+      async handler(ctx) {
         const { email, password } = ctx.params;
-        if (!this.isEmailExisted(email)) {
+        const isEmailExisted = await this.isEmailExisted(email);
+        if (!isEmailExisted) {
           return this.registerNewUser({ email, password });
         }
         throw new MoleculerClientError('User is existed', 422, '', [{ field: 'user', message: 'User is existed' }])
